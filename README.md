@@ -18,6 +18,12 @@ If the input: ```[94133,94133] [94200,94299] [94226,94399]```
 
 Then the output should be: ```[94133,94133] [94200,94399]```
 
+### Design and Further:
+* This code only has a service layer.
+* Test code is written to test the service layer only.
+* Further we can add spring or GJuice frameword and plug in this service in a API.
+* Further we can write test case to test 'add' method for 'CondensedRangeList' class
+
 ### Test Code:
 * Run the junit test in the IDE or run ```./gradlew test``` from command line
 
