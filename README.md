@@ -19,7 +19,7 @@ If the input: ```[94133,94133] [94200,94299] [94226,94399]```
 Then the output should be: ```[94133,94133] [94200,94399]```
 
 ### Test Code:
-Just run the junit test code
+* Run the junit test in the IDE or run ```./gradlew test``` from command line
 
 ### Limitations:
 * The code will fail if the input is not in the correct format
