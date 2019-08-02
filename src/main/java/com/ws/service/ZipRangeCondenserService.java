@@ -14,6 +14,6 @@ public class ZipRangeCondenserService {
         for(int i=0; i< args.length; i++){
             frl.add(ZipRangeCondenserHelper.getRangeFromString(args[i]));
         }
-        return frl.toString().trim();
+        return frl.toString();
     }
 }

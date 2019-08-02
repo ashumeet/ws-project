@@ -8,7 +8,7 @@ import com.ws.model.Range;
 public class ZipRangeCondenserHelper {
 
     /**
-     * Method to validate the input
+     * Method to validate the input string
      * @param input
      * @return Boolean
      */
