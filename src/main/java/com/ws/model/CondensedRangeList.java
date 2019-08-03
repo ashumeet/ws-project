@@ -1,8 +1,9 @@
 package com.ws.model;
 
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Stack;
+import java.util.concurrent.atomic.AtomicReference;
+import java.util.stream.IntStream;
 
 /**
  * Data structure for list of Range
@@ -48,20 +49,21 @@ public class CondensedRangeList {
         normalizeRangeList();
     }
 
+    /**
+     * Code to normalized list after ever new addition
+     */
     private void normalizeRangeList() {
         Stack<Integer> delete = new Stack<>();
-        Boolean didNormalized = false;
-        for(int n = 1; n < ranges.size(); n++) {
+        AtomicReference<Boolean> didNormalized = new AtomicReference<>(false);
+        IntStream.range(1, ranges.size()).forEach(n -> {
             if(ranges.get(n-1).getEnd() >= ranges.get(n).getStart()) {
                 delete.push(n-1);
                 ranges.set(n, new Range(ranges.get(n-1).getStart(), ranges.get(n).getEnd()));
-                didNormalized = true;
+                didNormalized.set(true);
             }
-        }
-        while (!delete.empty()) {
-            ranges.remove((int) delete.pop());
-        }
-        if (didNormalized) normalizeRangeList();
+        });
+        while (!delete.empty()) ranges.remove((int) delete.pop());
+        if (didNormalized.get()) normalizeRangeList();
     }
 
     /**
