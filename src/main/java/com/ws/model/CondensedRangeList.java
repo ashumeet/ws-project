@@ -2,6 +2,7 @@ package com.ws.model;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * Data structure for list of Range
@@ -11,7 +12,7 @@ public class CondensedRangeList {
     /**
      * Instance to save list of Range internally
      */
-    private List<Range> ranges;
+    private LinkedList<Range> ranges;
 
     /**
      * Constructor for CondensedRangeList
@@ -34,14 +35,33 @@ public class CondensedRangeList {
             Range current = ranges.get(n);
             if(range.getEnd()+1 < current.getStart()) {
                 ranges.add(n, range);
+                normalizeRangeList();
                 return;
             } else if (range.getStart()+1 > current.getEnd()) {
                 continue;
             }
             ranges.set(n, new Range(Integer.min(range.getStart(), current.getStart()), Integer.max(range.getEnd(), current.getEnd())));
+            normalizeRangeList();
             return;
         }
         ranges.add(range);
+        normalizeRangeList();
+    }
+
+    private void normalizeRangeList() {
+        Stack<Integer> delete = new Stack<>();
+        Boolean didNormalized = false;
+        for(int n = 1; n < ranges.size(); n++) {
+            if(ranges.get(n-1).getEnd() >= ranges.get(n).getStart()) {
+                delete.push(n-1);
+                ranges.set(n, new Range(ranges.get(n-1).getStart(), ranges.get(n).getEnd()));
+                didNormalized = true;
+            }
+        }
+        while (!delete.empty()) {
+            ranges.remove((int) delete.pop());
+        }
+        if (didNormalized) normalizeRangeList();
     }
 
     /**

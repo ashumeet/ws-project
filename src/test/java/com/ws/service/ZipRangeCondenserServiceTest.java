@@ -26,8 +26,14 @@ public class ZipRangeCondenserServiceTest {
         assertEquals("[94133,94133] [94200,94399]", output);
     }
 
+    @Test
+    public void test3Success() throws Exception {
+        String output = service.condenseRange("[10,40] [50,60] [35,55] [90,100]");
+        assertEquals("[10,60] [90,100]", output);
+    }
+
     @Test(expected = Exception.class)
-    public void test3Failure() throws Exception  {
+    public void test4Failure() throws Exception  {
         service.condenseRange("{123} {234,234}");
     }
 }

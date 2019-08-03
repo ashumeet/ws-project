@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44261d3a-9987-40f1-86b7-b8db3357dcbc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ws/model/CondensedRangeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ws/model/CondensedRangeList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ws/service/ZipRangeCondenserHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ws/service/ZipRangeCondenserHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ws/service/ZipRangeCondenserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ws/service/ZipRangeCondenserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ws/service/ZipRangeCondenserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ws/service/ZipRangeCondenserServiceTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +99,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ws-project [build]">
+  <component name="RunManager" selected="Gradle.ZipRangeCondenserServiceTest.test3Success">
     <configuration name="ZipRangeCondenserServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -142,6 +140,26 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="ZipRangeCondenserServiceTest.test3Success" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.ws.service.ZipRangeCondenserServiceTest.test3Success&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="ws-project [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -163,8 +181,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ws-project [build]" />
+        <item itemvalue="Gradle.ZipRangeCondenserServiceTest.test3Success" />
         <item itemvalue="Gradle.ZipRangeCondenserServiceTest" />
+        <item itemvalue="Gradle.ws-project [build]" />
         <item itemvalue="Gradle.ZipRangeCondenserServiceTest.test2Success" />
       </list>
     </recent_temporary>
