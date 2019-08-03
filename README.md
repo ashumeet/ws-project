@@ -21,7 +21,6 @@ Then the output should be: ```[94133,94133] [94200,94399]```
 ### Design and Further:
 * This code only has model and service layer
 * Test code is written to test the service layer only
-* Further we can fix the edge case when already consolidated ranges started to overlap by checking the internal linkedList for overlap after each addition
 * Further we can add spring or GJuice frameword and plug in this service in a API
 * Further we can write test case to test 'add' method for 'CondensedRangeList' class
 
@@ -30,4 +29,3 @@ Then the output should be: ```[94133,94133] [94200,94399]```
 
 ### Limitations:
 * The code will fail if the input is not in the correct format
-* This code will breakdown when already consolidated ranges started to overlap
